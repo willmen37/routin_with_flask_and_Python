@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NINJAS</title>
+   </head>
+
+   <body>
+        {% if ninja_turtles == True %}
+          <img src="{{url_for('static', filename= 'images/tmnt.jpg')}}">
+        {% endif %}
+
+        {% if ninja_turtles == False %}
+          {% if color == "blue" %}
+          <img src="{{url_for('static', filename= 'images/leonardo.jpg')}}">
+          {% elif color == "orange" %}
+          <img src="{{url_for('static', filename= 'images/michelangelo.png')}}">
+          {% elif color == "red" %}
+          <img src="{{url_for('static', filename= 'images/raphael.jpg')}}">
+          {% elif color == "purple" %}
+          <img src="{{url_for('static', filename= 'images/donatello.jpg')}}">
+          {% else %}
+          <img src="{{url_for('static', filename= 'images/april.jpg')}}">
+          {% endif %}
+        {% endif %}
+   </body>
+</html>
